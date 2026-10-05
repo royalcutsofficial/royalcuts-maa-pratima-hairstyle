@@ -129,19 +129,7 @@ const reviews = [
   { name: 'Rohit Sharma', date: 'Jul 2026', text: 'Booked via WhatsApp, no waiting at all. The premium grooming package is worth every rupee.' }
 ];
 
-// /* ===== Render: services ===== */
-// document.getElementById('servicesGrid').innerHTML = services.map((s, i) => `
-//   <div class="col-sm-6 col-lg-3 reveal">
-//     <div class="service-card">
-//       <div class="service-img"><img src="https://picsum.photos/seed/service${i}/500/340" alt="${s.name}" loading="lazy"></div>
-//       <div class="service-body">
-//         <h5>${s.name}</h5>
-//         <p>${s.desc}</p>
-//         <div class="service-meta"><span class="price">₹${s.price}</span><span><i class="bi bi-clock"></i> ${s.time}</span></div>
-//         <a href="https://wa.me/919876543210?text=${encodeURIComponent('Hi, I want to book: ' + s.name)}" target="_blank" rel="noopener" class="btn btn-gold w-100">Book Now</a>
-//       </div>
-//     </div>
-//   </div>`).join('');
+
 
 /* ===== Render: gallery ===== */
 document.getElementById('galleryGrid').innerHTML = galleryItems.map(([cat, seed]) => `
