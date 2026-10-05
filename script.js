@@ -1,14 +1,121 @@
 /* ===== Data ===== */
+// const services = [
+//   { name: 'Classic Haircut', desc: 'Timeless scissor and clipper cut tailored to your face shape.', price: 50, time: '30 min' },
+//   { name: 'Fade Haircut', desc: 'Low, mid or high fade blended with razor-sharp precision.', price: 50, time: '40 min' },
+//   { name: 'Beard Trim', desc: 'Shaped, lined and softened with hot towel and beard oil.', price: 30, time: '20 min' },
+//   { name: 'Hair + Beard', desc: 'The full combo — haircut plus a complete beard grooming.', price: 60, time: '50 min' },
+//   { name: 'Hair Styling', desc: 'Professional styling with premium wax, clay or pomade.', price: 50, time: '25 min' },
+//   { name: 'Kids Haircut', desc: 'Gentle, patient cuts for the little gentlemen (under 12).', price: 40, time: '25 min' },
+//   { name: 'Premium Shave', desc: 'Traditional straight-razor shave with hot towel and balm.', price: 60, time: '30 min' },
+//   { name: 'Head Massage', desc: 'Relaxing oil massage to relieve stress and boost circulation.', price: 30, time: '20 min' }
+// ];
 const services = [
-  { name: 'Classic Haircut', desc: 'Timeless scissor and clipper cut tailored to your face shape.', price: 250, time: '30 min' },
-  { name: 'Fade Haircut', desc: 'Low, mid or high fade blended with razor-sharp precision.', price: 300, time: '40 min' },
-  { name: 'Beard Trim', desc: 'Shaped, lined and softened with hot towel and beard oil.', price: 150, time: '20 min' },
-  { name: 'Hair + Beard', desc: 'The full combo — haircut plus a complete beard grooming.', price: 450, time: '50 min' },
-  { name: 'Hair Styling', desc: 'Professional styling with premium wax, clay or pomade.', price: 200, time: '25 min' },
-  { name: 'Kids Haircut', desc: 'Gentle, patient cuts for the little gentlemen (under 12).', price: 180, time: '25 min' },
-  { name: 'Premium Shave', desc: 'Traditional straight-razor shave with hot towel and balm.', price: 200, time: '30 min' },
-  { name: 'Head Massage', desc: 'Relaxing oil massage to relieve stress and boost circulation.', price: 150, time: '20 min' }
+  {
+    name: 'Classic Haircut',
+    desc: 'Timeless scissor and clipper cut tailored to your face shape.',
+    price: 50,
+    time: '30 min',
+    image: 'https://clippersbarbershop-tx.com/wp-content/uploads/2025/08/Comb-over.jpg'
+  },
+  {
+    name: 'Fade Haircut',
+    desc: 'Low, mid or high fade blended with razor-sharp precision.',
+    price: 50,
+    time: '40 min',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9tt068z6L0zUcdymRKjiD-t8c0LvlUeG6-mOdCgBSV4HyxhTafWKOXt8&s=10'
+  },
+  {
+    name: 'Beard Trim',
+    desc: 'Shaped, lined and softened with hot towel and beard oil.',
+    price: 30,
+    time: '20 min',
+    image: 'https://media.istockphoto.com/id/872361244/photo/man-getting-his-beard-trimmed-with-electric-razor.jpg?s=612x612&w=0&k=20&c=_IjZcrY0Gp-2z6AWTQederZCA9BLdl-iqWkH0hGMTgg='
+  },
+  {
+    name: 'Hair + Beard',
+    desc: 'The full combo — haircut plus a complete beard grooming.',
+    price: 60,
+    time: '50 min',
+    image: 'https://i.pinimg.com/474x/85/0e/1f/850e1f65980b9298d155b01613d055d8.jpg'
+  },
+  {
+    name: 'Hair Styling',
+    desc: 'Professional styling with premium wax, clay or pomade.',
+    price: 50,
+    time: '25 min',
+    image: 'https://static.vecteezy.com/system/resources/thumbnails/034/039/868/small/low-fade-machine-haircut-for-handsome-bearded-man-on-white-background-hair-cut-with-a-smooth-transition-ai-generative-photo.jpg'
+  },
+  {
+    name: 'Kids Haircut',
+    desc: 'Gentle, patient cuts for the little gentlemen (under 12).',
+    price: 40,
+    time: '25 min',
+    image: 'https://st2.depositphotos.com/93533980/86298/i/450/depositphotos_862986846-stock-photo-little-boy-getting-neat-haircut.jpg'
+  },
+  {
+    name: 'Premium Shave',
+    desc: 'Traditional straight-razor shave with hot towel and balm.',
+    price: 60,
+    time: '30 min',
+    image: 'https://i.pinimg.com/originals/c2/86/a7/c286a746b0c277edeeeceb48ee25c57f.jpg'
+  },
+  {
+    name: 'Head Massage',
+    desc: 'Relaxing oil massage to relieve stress and boost circulation.',
+    price: 30,
+    time: '20 min',
+    image: 'https://img.magnific.com/free-photo/forehead-massage_23-2147638154.jpg?semt=ais_hybrid&w=740&q=80'
+  }
 ];
+
+
+/* ===== Render: Services ===== */
+
+const servicesGrid = document.getElementById('servicesGrid');
+
+if (servicesGrid) {
+  servicesGrid.innerHTML = services.map((s) => `
+    <div class="col-sm-6 col-lg-3 reveal">
+      <div class="service-card">
+
+        <div class="service-img">
+          <img
+            src="${s.image}"
+            alt="${s.name}"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="service-body">
+          <h5>${s.name}</h5>
+
+          <p>${s.desc}</p>
+
+          <div class="service-meta">
+            <span class="price">₹${s.price}</span>
+
+            <span>
+              <i class="bi bi-clock"></i>
+              ${s.time}
+            </span>
+          </div>
+
+          <a
+            href="https://wa.me/919876543210?text=${encodeURIComponent(
+              'Hi, I want to book: ' + s.name
+            )}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-gold w-100"
+          >
+            Book Now
+          </a>
+        </div>
+
+      </div>
+    </div>
+  `).join('');
+}
 
 const galleryItems = [
   ['haircuts', 'g1'], ['beard', 'g2'], ['styling', 'g3'], ['shop', 'g4'],
@@ -22,19 +129,19 @@ const reviews = [
   { name: 'Rohit Sharma', date: 'Jul 2026', text: 'Booked via WhatsApp, no waiting at all. The premium grooming package is worth every rupee.' }
 ];
 
-/* ===== Render: services ===== */
-document.getElementById('servicesGrid').innerHTML = services.map((s, i) => `
-  <div class="col-sm-6 col-lg-3 reveal">
-    <div class="service-card">
-      <div class="service-img"><img src="https://picsum.photos/seed/service${i}/500/340" alt="${s.name}" loading="lazy"></div>
-      <div class="service-body">
-        <h5>${s.name}</h5>
-        <p>${s.desc}</p>
-        <div class="service-meta"><span class="price">₹${s.price}</span><span><i class="bi bi-clock"></i> ${s.time}</span></div>
-        <a href="https://wa.me/919876543210?text=${encodeURIComponent('Hi, I want to book: ' + s.name)}" target="_blank" rel="noopener" class="btn btn-gold w-100">Book Now</a>
-      </div>
-    </div>
-  </div>`).join('');
+// /* ===== Render: services ===== */
+// document.getElementById('servicesGrid').innerHTML = services.map((s, i) => `
+//   <div class="col-sm-6 col-lg-3 reveal">
+//     <div class="service-card">
+//       <div class="service-img"><img src="https://picsum.photos/seed/service${i}/500/340" alt="${s.name}" loading="lazy"></div>
+//       <div class="service-body">
+//         <h5>${s.name}</h5>
+//         <p>${s.desc}</p>
+//         <div class="service-meta"><span class="price">₹${s.price}</span><span><i class="bi bi-clock"></i> ${s.time}</span></div>
+//         <a href="https://wa.me/919876543210?text=${encodeURIComponent('Hi, I want to book: ' + s.name)}" target="_blank" rel="noopener" class="btn btn-gold w-100">Book Now</a>
+//       </div>
+//     </div>
+//   </div>`).join('');
 
 /* ===== Render: gallery ===== */
 document.getElementById('galleryGrid').innerHTML = galleryItems.map(([cat, seed]) => `
