@@ -101,7 +101,7 @@ if (servicesGrid) {
           </div>
 
           <a
-            href="https://wa.me/919876543210?text=${encodeURIComponent(
+            href="https://wa.me/917001061920?text=${encodeURIComponent(
               'Hi, I want to book: ' + s.name
             )}"
             target="_blank"
