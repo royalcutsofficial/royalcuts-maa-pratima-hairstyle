@@ -13,35 +13,35 @@ const services = [
   {
     name: 'Classic Haircut',
     desc: 'Timeless scissor and clipper cut tailored to your face shape.',
-    price: 50,
+    price: 80,
     time: '30 min',
     image: 'https://clippersbarbershop-tx.com/wp-content/uploads/2025/08/Comb-over.jpg'
   },
   {
     name: 'Fade Haircut',
     desc: 'Low, mid or high fade blended with razor-sharp precision.',
-    price: 50,
+    price: 60,
     time: '40 min',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9tt068z6L0zUcdymRKjiD-t8c0LvlUeG6-mOdCgBSV4HyxhTafWKOXt8&s=10'
   },
   {
     name: 'Beard Trim',
     desc: 'Shaped, lined and softened with hot towel and beard oil.',
-    price: 30,
+    price: 40,
     time: '20 min',
     image: 'https://media.istockphoto.com/id/872361244/photo/man-getting-his-beard-trimmed-with-electric-razor.jpg?s=612x612&w=0&k=20&c=_IjZcrY0Gp-2z6AWTQederZCA9BLdl-iqWkH0hGMTgg='
   },
   {
     name: 'Hair + Beard',
     desc: 'The full combo — haircut plus a complete beard grooming.',
-    price: 60,
+    price: 70,
     time: '50 min',
     image: 'https://i.pinimg.com/474x/85/0e/1f/850e1f65980b9298d155b01613d055d8.jpg'
   },
   {
     name: 'Hair Styling',
     desc: 'Professional styling with premium wax, clay or pomade.',
-    price: 50,
+    price: 70,
     time: '25 min',
     image: 'https://static.vecteezy.com/system/resources/thumbnails/034/039/868/small/low-fade-machine-haircut-for-handsome-bearded-man-on-white-background-hair-cut-with-a-smooth-transition-ai-generative-photo.jpg'
   },
@@ -62,7 +62,7 @@ const services = [
   {
     name: 'Head Massage',
     desc: 'Relaxing oil massage to relieve stress and boost circulation.',
-    price: 30,
+    price: 50,
     time: '20 min',
     image: 'https://img.magnific.com/free-photo/forehead-massage_23-2147638154.jpg?semt=ais_hybrid&w=740&q=80'
   }
